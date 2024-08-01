@@ -1,0 +1,1 @@
+web: streamlit run sqlite.py --server.port 8080
