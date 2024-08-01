@@ -7,13 +7,6 @@ Rápida descrição do objetivo de fazer esse projeto
 | :sparkles: Nome        | **Deploy Azure App Service**
 | :label: Tecnologias | Python, Streamlit (tecnologias utilizadas)
 
-<!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://via.placeholder.com/1200x500.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
-
-## Detalhes do projeto
-
-Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, próximos passos, etc...
-
 # Deploy aplicativo web com Streamlit no Azure App Service (Web APP) com Azure Devops.
 
 Após ter o código pronto no arquivo app.py, listar as bibliotecas no arquivo requirements.txt, seguir o passo a passo abaixo.
