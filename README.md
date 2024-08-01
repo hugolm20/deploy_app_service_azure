@@ -125,7 +125,12 @@ stages:
               package: '$(Pipeline.Workspace)/drop/$(Build.BuildId).zip'
 ```
 
-Após criar o pipe e rodá-lo, você realizará o deploy e poderá acessar através do link que você pode encontrar na página do app service no Azure. Ele está no campo "Default domain".
+Após criar o pipe, é importante configurar o App Service para integração com o Azure Devops. 
+Você pode seguir a documentação neste [link](https://learn.microsoft.com/pt-br/azure/app-service/deploy-continuous-deployment?tabs=repos%2Cgithubactions).
+
+Vá em Deployement > Deployement Center > Setting e faça as configurações conforme o link acima.
+
+Depois de configurar, rode o pipeline no Azure Devops. Após rodá-lo, realizará o deploy e poderá acessar através do link que você pode encontrar na página do app service no Azure. Ele está no campo "Default domain".
 
 ![azure](./images/deploy_app_web_1.png)
 
