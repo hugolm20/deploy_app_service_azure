@@ -17,12 +17,14 @@ Após ter o código pronto no arquivo app.py, listar as bibliotecas no arquivo r
 ```az login```
 
 ### Criar app service:
-```az appservice plan create --name app-ilumi --resource-group rg-lab-fullstack --sku B1 --is-linux```
+```az appservice plan create --name <nome do app> --resource-group <resource group> --sku B1 --is-linux```
 
 OBS: Neste app service plan, eu escolhi o B1, o mais básico. Você pode visualizar os tipos e preços [aqui](https://azure.microsoft.com/en-us/pricing/details/app-service/windows/?ef_id=_k_CjwKCAjw5Ky1BhAgEiwA5jGujpu-2SeR1qwB0FtSsWQES_G6kId6gMsbjCc_GQPibUao_7hXjj8HPBoCLXcQAvD_BwE_k_&OCID=AIDcmmzmnb0182_SEM__k_CjwKCAjw5Ky1BhAgEiwA5jGujpu-2SeR1qwB0FtSsWQES_G6kId6gMsbjCc_GQPibUao_7hXjj8HPBoCLXcQAvD_BwE_k_&gad_source=1&gclid=CjwKCAjw5Ky1BhAgEiwA5jGujpu-2SeR1qwB0FtSsWQES_G6kId6gMsbjCc_GQPibUao_7hXjj8HPBoCLXcQAvD_BwE)!
 
 ### Criar web app:
-```az webapp create --name app-ilumi --resource-group rg-lab-fullstack --plan app-ilumi --runtime "python|3.10"```
+```az webapp create --name <nome do app> --resource-group <resource group> --plan <app service> --runtime "python|3.10"```
+
+OBS: caso tenha desenvolivo o seu aplicativo em outra versão do python, você deve trocar o comando para versão que utilizou.
 
 ## Adicionar em Settings > Configuration > General settings no campo Startup Command:
 ```python -m streamlit run app.py --server.port 8000 --server.address 0.0.0.0```
@@ -58,8 +60,8 @@ variables:
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
 
-  # Python version: 3.10
-  pythonVersion: '3.10'
+  # Python version: 3.<version>
+  pythonVersion: '3.<version>'
 
 stages:
 - stage: Build
