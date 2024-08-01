@@ -24,7 +24,7 @@ OBS: Neste app service plan, eu escolhi o B1, o mais básico. Você pode visuali
 ### Criar web app:
 ```az webapp create --name <nome do app> --resource-group <resource group> --plan <app service> --runtime "python|3.10"```
 
-OBS: caso tenha desenvolivo o seu aplicativo em outra versão do python, você deve trocar o comando para versão que utilizou.
+OBS: Se desenvolveu o seu aplicativo em outra versão do python, você deve trocar o comando para versão que utilizou.
 
 ## Adicionar em Settings > Configuration > General settings no campo Startup Command:
 ```python -m streamlit run app.py --server.port 8000 --server.address 0.0.0.0```
