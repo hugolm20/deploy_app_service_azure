@@ -1,13 +1,14 @@
-# Nome do meu projeto
-
-Rápida descrição do objetivo de fazer esse projeto
-
-| :placard: Vitrine.Dev |     |
-| -------------  | --- |
-| :sparkles: Nome        | **Deploy Azure App Service**
-| :label: Tecnologias | Python, Streamlit (tecnologias utilizadas)
-
 # Deploy aplicativo web com Streamlit no Azure App Service (Web APP) com Azure Devops.
+
+Criei este repositório com o objetivo de facilitar o deploy de aplicativos web, feitos com Streamlit, no Azure App Service.
+
+Faço isso com o intuito de ajudar a comunidade DEV brasileira, pois, quando precisei realizar essa tarefa para minha equipe de trabalho, encontrei várias dificuldades. Havia documentações em outros serviços de repositórios, documentações incompletas e dúvidas sem respostas.
+
+Se eu conseguir ajudar uma pessoa, já terá valido a pena.
+
+| :sparkles: Nome        | **Deploy Azure App Service**
+| -------------  | --- |
+| :label: Tecnologias | Python, Streamlit (tecnologias utilizadas)
 
 Após ter o código pronto no arquivo app.py, listar as bibliotecas no arquivo requirements.txt, seguir o passo a passo abaixo.
 
@@ -23,20 +24,20 @@ OBS: Neste app service plan, eu escolhi o B1, o mais básico. Você pode visuali
 ### Criar web app:
 ```az webapp create --name app-ilumi --resource-group rg-lab-fullstack --plan app-ilumi --runtime "python|3.10"```
 
-### Adicionar em Settings > Configuration > General settings no campo Startup Command:
+## Adicionar em Settings > Configuration > General settings no campo Startup Command:
 ```python -m streamlit run app.py --server.port 8000 --server.address 0.0.0.0```
 
 ![azure](./images/deploy_app_web.png)
 
 OBS: Caso ainda não tenha, criar o arquivo ```Procfile``` com o conteúdo: ```web: streamlit run sqlite.py --server.port 8080```
 
-### Criar o pipeline no repositório
+## Criar o pipeline no repositório
 Com o arquivo azure-pipelines.yml, criar o pipeline no repositório do Azure Devops.
 
 
 Para criar o pipeline, seguir a [documentação](https://learn.microsoft.com/pt-br/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=python%2Cbrowser).
 
-O código do pipeline de ser assim:
+O código do pipeline deve ser assim:
 
 ```ruby 
 trigger:
