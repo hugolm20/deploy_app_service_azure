@@ -126,3 +126,6 @@ Após criar o pipe e rodá-lo, você realizará o deploy e poderá acessar atrav
 
 ![azure](./images/deploy_app_web_1.png)
 
+Caso tenham alguma correção ou comentário, não exitem em criar issues. 
+
+Abraços!
