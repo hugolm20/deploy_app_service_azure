@@ -31,7 +31,7 @@ OBS: Se desenvolveu o seu aplicativo em outra versão do python, você deve troc
 
 ![azure](./images/deploy_app_web.png)
 
-OBS: Caso ainda não tenha, criar o arquivo ```Procfile``` com o conteúdo: ```web: streamlit run sqlite.py --server.port 8080```
+OBS: Caso ainda não tenha, criar o arquivo ```Procfile``` com o conteúdo: ```web: streamlit run app.py --server.port 8080```
 
 ## Criar o pipeline no repositório
 Com o arquivo azure-pipelines.yml, criar o pipeline no repositório do Azure Devops.
